@@ -1,0 +1,22 @@
+.text-center
+{
+  margin-top: 20px;
+}
+
+.img
+{
+  text-align: center;
+}
+.field
+{
+  width: 100%;
+}
+.container
+{
+  width: 60%;
+  margin: auto;
+}
+.login
+{
+  margin: 10px;
+}

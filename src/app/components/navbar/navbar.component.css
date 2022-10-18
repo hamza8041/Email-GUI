@@ -1,0 +1,14 @@
+span.space
+{
+  flex: auto;
+ text-align: right;
+}
+p.spacer
+{
+
+  margin-right: 60px;
+}
+p.lspace
+{
+  margin: 10;
+}

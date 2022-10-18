@@ -1,0 +1,45 @@
+
+<div class="container">
+
+  <div class="card">
+
+    <form [formGroup]="emailform" (ngSubmit)="dosubmit()">
+    <h1 style="text-align: center;">Compose Email</h1>
+    <mat-form-field class="field" appearance="outline">
+      <mat-label>TO</mat-label>
+      <input matInput name="to" formControlName="to" [(ngModel)]="data.to">
+
+
+    </mat-form-field>
+    <small class="text" *ngIf="!emailform.get('to').valid && emailform.get('to').touched">Please enter a Valid Email
+
+    </small>
+
+
+    <mat-form-field appearance="fill" class="field" appearance="outline">
+      <mat-label>Subject</mat-label>
+      <input matInput name="subj" formControlName="subj" [(ngModel)]="data.subj">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="outline" class="field">
+      <mat-label>Enter your Message</mat-label>
+      <textarea rows="10" matInput placeholder="Ex. It makes me feel..." name="message" formControlName="message" [(ngModel)]="data.message"></textarea>
+    </mat-form-field>
+
+
+
+
+
+
+  <div class="text-center">
+    <button mat-raised-button color="accent" type="submit" class="send">Send Email</button>
+    <button mat-raised-button color="primary" type="reset" class="reset">Reset</button>
+  </div>
+
+</form>
+
+
+</div>
+
+{{data|json}}
